@@ -83,6 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gtop="LANG=en_US.utf8 TERM=xterm-256color gtop"
+alias adb-current-activity="adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
+alias adb-deeplink="adb shell am start -W -a android.intent.action.VIEW -d"
 
 # Hide full name of computer
 prompt_context() {
