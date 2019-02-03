@@ -103,6 +103,11 @@ shuf -n 1 ~/quotes | cowsay
 # added by travis gem
 [ -f /home/arka/.travis/travis.sh ] && source /home/arka/.travis/travis.sh
 
+# Set PATH so it includes user's private bin if it exists
+if [ -d "${HOME}/bin" ] ; then
+	PATH="${HOME}/bin:${PATH}"
+fi
+
 # Gradle aliases
 alias gradle-assembleDebug="./gradlew assembleDebug --debug --info --stacktrace"
 alias gradle-installDebug="./gradlew installDebug --debug --info --stacktrace"
